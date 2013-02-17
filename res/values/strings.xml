@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">B-Unit</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_converter">B-Unit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_other_main">OtherMainActivity</string>
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="result_default">NaN</string>
+
+    <string-array name="conversion_type_array">
+        <item>Distance</item>
+        <item>Speed</item>
+        <item>Volume</item>
+        <item>Weight / Mass</item>
+        <item>Temperature</item>
+    </string-array>
+
+    <string-array name="conversion_category_units0">
+        <item>Centimeters</item>
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Meters</item>
+        <item>Kilometers</item>
+        <item>Miles</item>
+    </string-array>
+    
+    <string-array name="conversion_category_units1">
+        <item>Feet per Second</item>
+        <item>Miles per Hour</item>
+    </string-array>
+    
+    <string-array name="conversion_category_units2">
+        <item>Millilitres</item>
+        <item>Litres</item>
+    </string-array>
+
+    <string-array name="conversion_category_units3">
+        <item>Kilograms</item>
+        <item>Pounds</item>
+    </string-array>
+    
+    <string-array name="conversion_category_units4">
+        <item>Fahrenheit</item>
+        <item>Celcius</item>
+        <item>Kelvin</item>
+    </string-array>
+
+    <!-- Distance -->
+    <string-array name="conversion_matrix0">
+        <!-- CM to CM -->
+        <item>1,*</item>
+        <!--  CM to Inches -->
+        <item>2.54,/</item>
+        <!-- CM to Feet -->
+        <item>30.48,/</item>
+        <!-- CM to Yards -->
+        <item>2.54,/,36,/</item>
+        <!-- CM to Meters -->
+        <item>100,/</item>
+        <!-- CM to Kilometers -->
+        <item>100000,/</item>
+        <!-- CM to Miles -->
+        <item>2.54,/,63360,/</item>
+        <!-- Inches to CM -->
+        <item>2.54,*</item>
+        <!-- Inches to Inches -->
+        <item>1,*</item>
+        <!-- Inches to Feet -->
+        <item>12,/</item>
+        <!-- Inches to Yards -->
+        <item>36,/</item>
+        <!-- Inches to Meters -->
+        <item>2.54,*,100,/</item>
+        <!-- Inches to Kilometers -->
+        <item>2.54,*,100000,/</item>
+        <!-- Inches to Miles -->
+        <item>63360,/</item>
+        <!-- Feet to CM -->
+        <item>30.48,*</item>
+        <!-- Feet to Inches -->
+        <item>12,*</item>
+        <!-- Feet to Feet -->
+        <item>1,*</item>
+        <!-- Feet to Yards -->
+        <item>3,/</item>
+        <!-- Feet to Meters -->
+        <item>.3048,*</item>
+        <!-- Feet to Kilometers -->
+        <item>30.48,*,100000,/</item>
+        <!-- Feet to Miles -->
+        <item>5280,/</item>
+        <!-- Yards to CM -->
+        <item>91.44,*</item>
+        <!-- Yards to Inches -->
+        <item>36,*</item>
+        <!-- Yards to Feet -->
+        <item>3,*</item>
+        <!-- Yards to Yards -->
+        <item>1,*</item>
+        <!-- Yards to Meters -->
+        <item>2.54,*,100,/,36,*</item>
+        <!-- Yards to Kilometers -->
+        <item>2.54,*,100,/,36,*,1000,/</item>
+        <!-- Yards to Miles -->
+        <item>1760,/</item>
+        <!-- Meters to CM -->
+        <item>100,*</item>
+        <!-- Meters to Inches -->
+        <item>2.54,/,100,*</item>
+        <!-- Meters to Feet -->
+        <item>2.54,/,100,*,12,/</item>
+        <!-- Meters to Yards -->
+        <item>0.9144,/</item>
+        <!-- Meters to Meters -->
+        <item>1,*</item>
+        <!-- Meters to Kilometers -->
+        <item>1000,/</item>
+        <!-- Meters to Miles -->
+        <item>2.54,/,100,*,12,/,5280,/</item>
+        <!-- KM to CM -->
+        <item>100000,*</item>
+        <!-- KM to Inches -->
+        <item>39370.0787,*</item>
+        <!-- KM to Feet -->
+        <item>2.54,/,100,*,12,/,1000,*</item>
+        <!-- KM to Yards -->
+        <item>0.9144,/,1000,*</item>
+        <!-- KM to Meters -->
+        <item>1000,*</item>
+        <!-- KM to KM -->
+        <item>1,*</item>
+        <!-- KM to Miles -->
+        <item>1609.344,/,1000,*</item>
+        <!-- Miles to CM -->
+        <item>91.44,*,1760,*</item>
+        <!-- Miles to Inches -->
+        <item>63360,*</item>
+        <!-- Miles to Feet -->
+        <item>5280,*</item>
+        <!-- Miles to Yards -->
+        <item>1760,*</item>
+        <!-- Miles to Meters -->
+        <item>1609.344,*</item>
+        <!-- Miles to KM -->
+        <item>1.609344,*</item>
+        <!-- Miles to Miles -->
+        <item>1,*</item>
+    </string-array>
+
+    <!-- Speed -->
+    <string-array name="conversion_matrix1">
+        <!-- FPS to FPS -->
+        <item>1,*</item>
+        <!-- FPS to MPH -->
+        <item>15,22,/,*</item>
+        <!-- MPH to FPS -->
+        <item>22,15,/,*</item>
+        <!-- MPH to MPH -->
+        <item>1,*</item>
+    </string-array>
+
+    <!-- Volume -->
+    <string-array name="conversion_matrix2">
+        <!-- ML to ML -->
+        <item>1,*</item>
+        <!--  ML to L -->
+        <item>1000,/</item>
+        <!-- L to ML -->
+        <item>1000,*</item>
+        <!-- L to L -->
+        <item>1,*</item>
+    </string-array>
+    
+    <!-- Weight / Mass -->
+    <string-array name="conversion_matrix3">
+        <!-- KG to KG -->
+        <item>1,*</item>
+        <!-- KG to Pounds -->
+        <item>2.2046,*</item>
+        <!-- Pounds to KG -->
+        <item>2.2046,/</item>
+        <!-- Pounds to Pounds -->
+        <item>1,*</item>
+    </string-array>
+    
+    <!-- Temperature -->
+    <string-array name="conversion_matrix4">
+        <!-- Fahrenheith to Fahrenheit -->
+        <item>1,*</item>
+        <!-- Fahrenheit to C -->
+        <item>32,-,5,9,/,*</item>
+        <!-- Fahrenheit to Kelvin -->
+        <item>32,-,5,9,/,*,273.15,+</item>
+        <!-- C to Fahrenheit -->
+        <item>9,5,/,*,32,+</item>
+        <!-- C to C -->
+        <item>1,*</item>
+        <!-- C to Kelvin -->
+        <item>273.15,+</item>
+        <!-- Kelvin to Fahrenheit -->
+        <item>273.15,-,9,5,/,*,32,+</item>
+        <!-- Kelvin to C -->
+        <item>273.15,-</item>
+        <!-- Kelvin to Kelvin -->
+        <item>1,*</item>
+    </string-array>
+</resources>
