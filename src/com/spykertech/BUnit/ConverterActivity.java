@@ -34,7 +34,7 @@ public class ConverterActivity extends FragmentActivity implements
 	private int savedToPosition = 0;
 	private boolean rpnEnabled = false;
 
-	private final RpnEngine engine = new RpnEngine();
+	private final RpnEngine engine = new RpnEngine(10);
 	
 	private ArrayAdapter<CharSequence> getFromToAdapter() {
 		String units = String.format(Locale.ENGLISH, "conversion_category_units%d", getActionBar().getSelectedNavigationIndex());
@@ -72,6 +72,8 @@ public class ConverterActivity extends FragmentActivity implements
 		
 		if(rpnEnabled) {
 			getStatusView().setText(String.format("%s,%s", conversionValue, rpnExpression));
+		} else {
+			getStatusView().setText("");
 		}
 	}
 
@@ -223,9 +225,7 @@ public class ConverterActivity extends FragmentActivity implements
 		switch (item.getItemId()) {
 			case R.id.menu_toggle_rpn:
 				rpnEnabled = !rpnEnabled;
-				if(rpnEnabled == false) {
-					getStatusView().setText("");
-				}
+				updateDisplay();
 				break;
 			default:
 				returnValue = super.onOptionsItemSelected(item);

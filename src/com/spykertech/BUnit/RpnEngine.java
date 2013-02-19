@@ -2,14 +2,21 @@ package com.spykertech.BUnit;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 import java.util.Stack;
 
 public class RpnEngine {
 	private Stack<String> stack = new Stack<String>();
 	private static final Set<String> operatorTokens = new HashSet<String>(Arrays.asList(new String[]{"+", "-", "*", "/"}));
+	private Integer decimals = null;
+	
+	public RpnEngine(int decimals) {
+		this.decimals = decimals;
+	}
 	
 	public RpnEngine() {
+		
 	}
 	
 	// TODO: create routine that checks for sufficient operands for any operator
@@ -105,6 +112,17 @@ public class RpnEngine {
 			
 			if(stack.size() == 1) {
 				returnValue = stack.pop();
+				try {
+					Double resultValue = Double.parseDouble(returnValue);
+					String format = "%f";
+					if(decimals != null) {
+						format = String.format(Locale.ENGLISH, "%s.%df", "%", decimals);
+					}
+					returnValue = String.format(format, resultValue);
+					returnValue = returnValue.replaceFirst("0+$", "");
+					returnValue = returnValue.replaceFirst("\\.$", "");
+				} catch (NumberFormatException e) {
+				}
 			} else {
 				returnValue = "Error, stack left with multiple values.";
 			}
