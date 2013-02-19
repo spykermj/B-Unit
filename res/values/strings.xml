@@ -2,15 +2,14 @@
 <resources>
 
     <string name="app_name">B-Unit</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_toggle_rpn">Toggle RPN Display</string>
     <string name="title_activity_converter">B-Unit</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_display_message">My Message</string>
-    <string name="title_activity_other_main">OtherMainActivity</string>
     <string name="from_label">From</string>
     <string name="to_label">To</string>
-    <string name="result_default">NaN</string>
-
+    <string name="input_hint">Input from value</string>
+    <string name="result_default"></string>
+    <string name="rpn_default"></string>
+    
     <string-array name="conversion_type_array">
         <item>Distance</item>
         <item>Speed</item>

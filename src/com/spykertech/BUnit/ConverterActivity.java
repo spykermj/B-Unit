@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.AdapterView;
@@ -27,9 +28,11 @@ public class ConverterActivity extends FragmentActivity implements
 	private static final String STATE_INPUT_NUMBER = "input_number";
 	private static final String STATE_SELECTED_FROM_ITEM = "selected_from_item";
 	private static final String STATE_SELECTED_TO_ITEM = "selected_to_item";
+	private static final String STATE_RPN_ENABLED = "rpn_enabled";
 	
 	private int savedFromPosition = 0;
 	private int savedToPosition = 0;
+	private boolean rpnEnabled = false;
 
 	private final RpnEngine engine = new RpnEngine();
 	
@@ -66,7 +69,10 @@ public class ConverterActivity extends FragmentActivity implements
 		} else {
 			getResultTextView().setText(engine.pushPop(conversionValue, rpnExpression));
 		}
-		getStatusView().setText(String.format("%s,%s", conversionValue, rpnExpression));
+		
+		if(rpnEnabled) {
+			getStatusView().setText(String.format("%s,%s", conversionValue, rpnExpression));
+		}
 	}
 
 	private String[] getConversionMatrix(int category) {
@@ -146,13 +152,15 @@ public class ConverterActivity extends FragmentActivity implements
 		}
 		
 		if (savedState.containsKey(STATE_SELECTED_FROM_ITEM)) {
-			int selected = savedState.getInt(STATE_SELECTED_FROM_ITEM);
-			savedFromPosition = selected;
+			savedFromPosition = savedState.getInt(STATE_SELECTED_FROM_ITEM);
 		}
 		
 		if (savedState.containsKey(STATE_SELECTED_TO_ITEM)) {
-			int selected = savedState.getInt(STATE_SELECTED_TO_ITEM);
-			savedToPosition = selected;
+			savedToPosition = savedState.getInt(STATE_SELECTED_TO_ITEM);
+		}
+		
+		if (savedState.containsKey(STATE_RPN_ENABLED)) {
+			rpnEnabled = savedState.getBoolean(STATE_RPN_ENABLED);
 		}
 	}
 
@@ -164,6 +172,7 @@ public class ConverterActivity extends FragmentActivity implements
 		outState.putString(STATE_INPUT_NUMBER, getValueToConvert());
 		outState.putInt(STATE_SELECTED_FROM_ITEM, getFromPosition());
 		outState.putInt(STATE_SELECTED_TO_ITEM, getToPosition());
+		outState.putBoolean(STATE_RPN_ENABLED, rpnEnabled);
 	}
 
 	@Override
@@ -208,4 +217,19 @@ public class ConverterActivity extends FragmentActivity implements
 		return false;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		boolean returnValue = true;
+		switch (item.getItemId()) {
+			case R.id.menu_toggle_rpn:
+				rpnEnabled = !rpnEnabled;
+				if(rpnEnabled == false) {
+					getStatusView().setText("");
+				}
+				break;
+			default:
+				returnValue = super.onOptionsItemSelected(item);
+		}
+		return returnValue;
+	}
 }

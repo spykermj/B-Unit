@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="@string/input_hint"
                 android:inputType="numberSigned|numberDecimal" >
 
                 <requestFocus />
@@ -78,7 +79,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/result_default"
+                android:text="@string/rpn_default"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
         </LinearLayout>
 </LinearLayout>
