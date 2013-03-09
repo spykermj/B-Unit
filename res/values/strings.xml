@@ -9,15 +9,15 @@
     <string name="input_hint">Input from value</string>
     <string name="result_default"></string>
     <string name="rpn_default"></string>
-    
+
     <string-array name="conversion_type_array">
         <item>Distance</item>
         <item>Speed</item>
-        <item>Volume</item>
+        <item>Liquid Volume</item>
         <item>Weight / Mass</item>
         <item>Temperature</item>
+        <item>Volume</item>
     </string-array>
-
     <string-array name="conversion_category_units0">
         <item>Centimeters</item>
         <item>Inches</item>
@@ -27,33 +27,39 @@
         <item>Kilometers</item>
         <item>Miles</item>
     </string-array>
-    
     <string-array name="conversion_category_units1">
         <item>Feet per Second</item>
         <item>Miles per Hour</item>
     </string-array>
-    
     <string-array name="conversion_category_units2">
         <item>Millilitres</item>
         <item>Litres</item>
     </string-array>
-
     <string-array name="conversion_category_units3">
         <item>Kilograms</item>
         <item>Pounds</item>
     </string-array>
-    
     <string-array name="conversion_category_units4">
         <item>Fahrenheit</item>
         <item>Celcius</item>
         <item>Kelvin</item>
     </string-array>
+    <string-array name="conversion_category_units5">
+        <item>Cubic Centimetres</item>
+        <item>Cubic Inches</item>
+        <item>Cubic Feet</item>
+        <item>Cubic Yards</item>
+        <item>Cubic Metres</item>
+        <item>Cubic Kilometres</item>
+        <item>Cubic Miles</item>
+    </string-array>
 
     <!-- Distance -->
     <string-array name="conversion_matrix0">
+
         <!-- CM to CM -->
         <item>1,*</item>
-        <!--  CM to Inches -->
+        <!-- CM to Inches -->
         <item>2.54,/</item>
         <!-- CM to Feet -->
         <item>30.48,/</item>
@@ -153,6 +159,7 @@
 
     <!-- Speed -->
     <string-array name="conversion_matrix1">
+
         <!-- FPS to FPS -->
         <item>1,*</item>
         <!-- FPS to MPH -->
@@ -163,20 +170,22 @@
         <item>1,*</item>
     </string-array>
 
-    <!-- Volume -->
+    <!-- Liquid Volume -->
     <string-array name="conversion_matrix2">
+
         <!-- ML to ML -->
         <item>1,*</item>
-        <!--  ML to L -->
+        <!-- ML to L -->
         <item>1000,/</item>
         <!-- L to ML -->
         <item>1000,*</item>
         <!-- L to L -->
         <item>1,*</item>
     </string-array>
-    
+
     <!-- Weight / Mass -->
     <string-array name="conversion_matrix3">
+
         <!-- KG to KG -->
         <item>1,*</item>
         <!-- KG to Pounds -->
@@ -186,9 +195,10 @@
         <!-- Pounds to Pounds -->
         <item>1,*</item>
     </string-array>
-    
+
     <!-- Temperature -->
     <string-array name="conversion_matrix4">
+
         <!-- Fahrenheith to Fahrenheit -->
         <item>1,*</item>
         <!-- Fahrenheit to C -->
@@ -208,4 +218,111 @@
         <!-- Kelvin to Kelvin -->
         <item>1,*</item>
     </string-array>
+    
+    <!-- Volume -->
+    <string-array name="conversion_matrix5">
+        <!-- Cubic Centimetres to Cubic Centimetres -->
+        <item>1,*</item>
+        <!-- Cubic Centimetres to Cubic Inches -->
+        <item>2048383,/,125000,*</item>
+        <!-- Cubic Centimetres to Cubic Feet -->
+        <item>1000000,/,55306341,1953125000,/,/</item>
+        <!-- Cubic Centimetres to Cubic Yards -->
+        <item>1000000,/,1493271207,1953125000,/,/</item>
+        <!-- Cubic Centimetres to Cubic Metres -->
+        <item>1000000,/</item>
+        <!-- Cubic Centimetres to Cubic Kilometres -->
+        <item>1000000000000000,/</item>
+        <!-- Cubic Centimetres to Cubic Miles -->
+        <item>1000000,/,4168181825,/</item>
+        <!-- Cubic Inches to Cubic Centimetres -->
+        <item>125000000000,2048383,/,/,1000000,*</item>
+        <!-- Cubic Inches to Cubic Inches -->
+        <item>1,*</item>
+        <!-- Cubic Inches to Cubic Feet -->
+        <item>125000000000,2048383,/,/,55306341,1953125000,/,/</item>
+        <!-- Cubic Inches to Cubic Yards -->
+        <item>125000000000,2048383,/,/,1493271207,1953125000,/,/</item>
+        <!-- Cubic Inches to Cubic Metres -->
+        <item>125000000000,2048383,/,/</item>
+        <!-- Cubic Inches to Cubic Kilometres -->
+        <item>125000000000,2048383,/,/,1000000000,/</item>
+        <!-- Cubic Inches to Cubic Miles -->
+        <item>125000000000,2048383,/,/,4168181825,/</item>
+        <!-- Cubic Feet to Cubic Centimetres -->
+        <item>55306341,1953125000,/,*,1000000,*</item>
+        <!-- Cubic Feet to Cubic Inches -->
+        <item>55306341,1953125000,/,*,125000000000,2048383,/,*</item>
+        <!-- Cubic Feet to Cubic Feet -->
+        <item>1,*</item>
+        <!-- Cubic Feet to Cubic Yards -->
+        <item>55306341,1953125000,/,*,1493271207,1953125000,/,/</item>
+        <!-- Cubic Feet to Cubic Metres -->
+        <item>55306341,1953125000,/,*</item>
+        <!-- Cubic Feet to Cubic Kilometres -->
+        <item>55306341,1953125000,/,*,1000000000,/</item>
+        <!-- Cubic Feet to Cubic Miles -->
+        <item>55306341,1953125000,/,*,4168181825,/</item>
+        <!-- Cubic Yards to Cubic Centimetres -->
+        <item>55306341,1953125000,/,*,1000000,*</item>
+        <!-- Cubic Yards to Cubic Inches -->
+        <item>1493271207,1953125000,/,*,125000000000,2048383,/,*</item>
+        <!-- Cubic Yards to Cubic Feet -->
+        <item>1493271207,1953125000,/,*,55306341,1953125000,/,/</item>
+        <!-- Cubic Yards to Cubic Yards -->
+        <item>1,*</item>
+        <!-- Cubic Yards to Cubic Metres -->
+        <item>1493271207,1953125000,/,*</item>
+        <!-- Cubic Yards to Cubic Kilometres -->
+        <item>1493271207,1953125000,/,*,1000000000,/</item>
+        <!-- Cubic Yards to Cubic Miles -->
+        <item>1493271207,1953125000,/,*,4168181825,/</item>
+        <!-- Cubic Metres to Cubic Centimetres -->
+        <item>1000000,*</item>
+        <!-- Cubic Metres to Cubic Inches -->
+        <item>125000000000,2048383,/,*</item>
+        <!-- Cubic Metres to Cubic Feet -->
+        <item>55306341,1953125000,/,/</item>
+        <!-- Cubic Metres to Cubic Yards -->
+        <item>1493271207,1953125000,/,/</item>
+        <!-- Cubic Metres to Cubic Metres -->
+        <item>1,*</item>
+        <!-- Cubic Metres to Cubic Kilometres -->
+        <item>1000000000,/</item>
+        <!-- Cubic Metres to Cubic Miles -->
+        <item>4168181825,/</item>
+        <!-- Cubic Kilometres to Cubic Centimetres -->
+        <item>1000000000,*,1000000,*</item>
+        <!-- Cubic Kilometres to Cubic Inches -->
+        <item>1000000000,*,125000000000,2048383,/,*</item>
+        <!-- Cubic Kilometres to Cubic Feet -->
+        <item>1000000000,*,55306341,1953125000,/,/</item>
+        <!-- Cubic Kilometres to Cubic Yards -->
+        <item>1000000000,*,1493271207,1953125000,/,/</item>
+        <!-- Cubic Kilometres to Cubic Metres -->
+        <item>1000000000,*</item>
+        <!-- Cubic Kilometres to Cubic Kilometres -->
+        <item>1,*</item>
+        <!-- Cubic Kilometres to Cubic Miles -->
+        <item>1000000000,*,4168181825,/</item>
+        <!-- Cubic Miles to Cubic Centimetres -->
+        <item>4168181825,*,1000000,*</item>
+        <!-- Cubic Miles to Cubic Inches -->
+        <item>4168181825,*,125000000000,2048383,/,*</item>
+        <!-- Cubic Miles to Cubic Feet -->
+        <item>4168181825,*,55306341,1953125000,/,/</item>
+        <!-- Cubic Miles to Cubic Yards -->
+        <item>4168181825,*,1493271207,1953125000,/,/</item>
+        <!-- Cubic Miles to Cubic Metres -->
+        <item>4168181825,*</item>
+        <!-- Cubic Miles to Cubic Kilometres -->
+        <item>4168181825,*,1000000000,/</item>
+        <!-- Cubic Miles to Cubic Miles -->
+        <item>1,*</item>
+	</string-array>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

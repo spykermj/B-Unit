@@ -116,7 +116,7 @@ public class RpnEngine {
 					Double resultValue = Double.parseDouble(returnValue);
 					String format = "%f";
 					if(decimals != null) {
-						format = String.format(Locale.ENGLISH, "%s.%df", "%", decimals);
+						format = String.format(Locale.ENGLISH, "%s.%dg", "%", decimals);
 					}
 					returnValue = String.format(format, resultValue);
 					returnValue = returnValue.replaceFirst("0+$", "");
