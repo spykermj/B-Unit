@@ -19,17 +19,20 @@
         <item>Volume</item>
     </string-array>
     <string-array name="conversion_category_units0">
-        <item>Centimeters</item>
+        <item>Centimetres</item>
         <item>Inches</item>
         <item>Feet</item>
         <item>Yards</item>
-        <item>Meters</item>
-        <item>Kilometers</item>
+        <item>Metres</item>
+        <item>Kilometres</item>
         <item>Miles</item>
     </string-array>
     <string-array name="conversion_category_units1">
         <item>Feet per Second</item>
+        <item>Metres per Second</item>
+        <item>Kilometres per Hour</item>
         <item>Miles per Hour</item>
+        <item>Mach</item>
     </string-array>
     <string-array name="conversion_category_units2">
         <item>Millilitres</item>
@@ -65,9 +68,9 @@
         <item>30.48,/</item>
         <!-- CM to Yards -->
         <item>2.54,/,36,/</item>
-        <!-- CM to Meters -->
+        <!-- CM to Metres -->
         <item>100,/</item>
-        <!-- CM to Kilometers -->
+        <!-- CM to Kilometres -->
         <item>100000,/</item>
         <!-- CM to Miles -->
         <item>2.54,/,63360,/</item>
@@ -79,9 +82,9 @@
         <item>12,/</item>
         <!-- Inches to Yards -->
         <item>36,/</item>
-        <!-- Inches to Meters -->
+        <!-- Inches to Metres -->
         <item>2.54,*,100,/</item>
-        <!-- Inches to Kilometers -->
+        <!-- Inches to Kilometres -->
         <item>2.54,*,100000,/</item>
         <!-- Inches to Miles -->
         <item>63360,/</item>
@@ -93,9 +96,9 @@
         <item>1,*</item>
         <!-- Feet to Yards -->
         <item>3,/</item>
-        <!-- Feet to Meters -->
+        <!-- Feet to Metres -->
         <item>.3048,*</item>
-        <!-- Feet to Kilometers -->
+        <!-- Feet to Kilometres -->
         <item>30.48,*,100000,/</item>
         <!-- Feet to Miles -->
         <item>5280,/</item>
@@ -107,25 +110,25 @@
         <item>3,*</item>
         <!-- Yards to Yards -->
         <item>1,*</item>
-        <!-- Yards to Meters -->
+        <!-- Yards to Metres -->
         <item>2.54,*,100,/,36,*</item>
-        <!-- Yards to Kilometers -->
+        <!-- Yards to Kilometres -->
         <item>2.54,*,100,/,36,*,1000,/</item>
         <!-- Yards to Miles -->
         <item>1760,/</item>
-        <!-- Meters to CM -->
+        <!-- Metres to CM -->
         <item>100,*</item>
-        <!-- Meters to Inches -->
+        <!-- Metres to Inches -->
         <item>2.54,/,100,*</item>
-        <!-- Meters to Feet -->
+        <!-- Metres to Feet -->
         <item>2.54,/,100,*,12,/</item>
-        <!-- Meters to Yards -->
+        <!-- Metres to Yards -->
         <item>0.9144,/</item>
-        <!-- Meters to Meters -->
+        <!-- Metres to Metres -->
         <item>1,*</item>
-        <!-- Meters to Kilometers -->
+        <!-- Metres to Kilometres -->
         <item>1000,/</item>
-        <!-- Meters to Miles -->
+        <!-- Metres to Miles -->
         <item>2.54,/,100,*,12,/,5280,/</item>
         <!-- KM to CM -->
         <item>100000,*</item>
@@ -135,7 +138,7 @@
         <item>2.54,/,100,*,12,/,1000,*</item>
         <!-- KM to Yards -->
         <item>0.9144,/,1000,*</item>
-        <!-- KM to Meters -->
+        <!-- KM to Metres -->
         <item>1000,*</item>
         <!-- KM to KM -->
         <item>1,*</item>
@@ -149,7 +152,7 @@
         <item>5280,*</item>
         <!-- Miles to Yards -->
         <item>1760,*</item>
-        <!-- Miles to Meters -->
+        <!-- Miles to Metres -->
         <item>1609.344,*</item>
         <!-- Miles to KM -->
         <item>1.609344,*</item>
@@ -159,14 +162,55 @@
 
     <!-- Speed -->
     <string-array name="conversion_matrix1">
-
         <!-- FPS to FPS -->
         <item>1,*</item>
+        <!-- FPS to MPS -->
+        <item>0.3048,*</item>
+        <!-- FPS to KPH -->
+        <item>0.3048,*,18,5,/,*</item>
         <!-- FPS to MPH -->
-        <item>15,22,/,*</item>
+        <item>0.3048,*,3125,1397,/,*</item>
+        <!-- FPS to Mach -->
+        <item>0.3048,*,343.2,/</item>
+        <!-- MPS to FPS -->
+        <item>0.3048,/</item>
+        <!-- MPS to MPS -->
+        <item>1,*</item>
+        <!-- MPS to KPH -->
+        <item>18,5,/,*</item>
+        <!-- MPS to MPH -->
+        <item>3125,1397,/,*</item>
+        <!-- MPS to Mach -->
+        <item>343.2,/</item>
+        <!-- KPH to FPS -->
+        <item>5,18,/,*,0.3048,/</item>
+        <!-- KPH to MPS -->
+        <item>5,18,/,*</item>
+        <!-- KPH to KPH -->
+        <item>1,*</item>
+        <!-- KPH to MPH -->
+        <item>5,18,/,*,3125,1397,/,*</item>
+        <!-- KPH to Mach -->
+        <item>5,18,/,*,343.2,/</item>
         <!-- MPH to FPS -->
-        <item>22,15,/,*</item>
+        <item>1397,3125,/,*,0.3048,/</item>
+        <!-- MPH to MPS -->
+        <item>1397,3125,/,*</item>
+        <!-- MPH to KPH -->
+        <item>1397,3125,/,*,18,5,/,*</item>
         <!-- MPH to MPH -->
+        <item>1,*</item>
+        <!-- MPH to Mach -->
+        <item>1397,3125,/,*,343.2,/</item>
+        <!-- Mach to FPS -->
+        <item>343.2,*,0.3048,/</item>
+        <!-- Mach to MPS -->
+        <item>343.2,*</item>
+        <!-- Mach to KPH -->
+        <item>343.2,*,18,5,/,*</item>
+        <!-- Mach to MPH -->
+        <item>343.2,*,3125,1397,/,*</item>
+        <!-- Mach to Mach -->
         <item>1,*</item>
     </string-array>
 
