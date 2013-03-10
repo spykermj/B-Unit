@@ -11,7 +11,7 @@
     <string name="rpn_default"></string>
 
     <string-array name="conversion_type_array">
-        <item>Distance</item>
+        <item>Length</item>
         <item>Speed</item>
         <item>Liquid Volume</item>
         <item>Weight / Mass</item>
