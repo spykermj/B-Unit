@@ -57,7 +57,7 @@
         <item>Cubic Miles</item>
     </string-array>
 
-    <!-- Distance -->
+    <!-- Length -->
     <string-array name="conversion_matrix0">
 
         <!-- CM to CM -->
@@ -364,9 +364,4 @@
         <!-- Cubic Miles to Cubic Miles -->
         <item>1,*</item>
 	</string-array>
-
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
 </resources>
