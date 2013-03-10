@@ -46,6 +46,7 @@
         <item>Fahrenheit</item>
         <item>Celcius</item>
         <item>Kelvin</item>
+        <item>Gas Mark</item>
     </string-array>
     <string-array name="conversion_category_units5">
         <item>Cubic Centimetres</item>
@@ -249,17 +250,31 @@
         <item>32,-,5,9,/,*</item>
         <!-- Fahrenheit to Kelvin -->
         <item>32,-,5,9,/,*,273.15,+</item>
+        <!-- Fahrenheit to Gas Mark -->
+        <item>0.04,*,10,-</item>
         <!-- C to Fahrenheit -->
         <item>9,5,/,*,32,+</item>
         <!-- C to C -->
         <item>1,*</item>
         <!-- C to Kelvin -->
         <item>273.15,+</item>
+        <!-- C to Gas Mark -->
+        <item>9,5,/,*,32,+,0.04,*,10,-</item>
         <!-- Kelvin to Fahrenheit -->
         <item>273.15,-,9,5,/,*,32,+</item>
         <!-- Kelvin to C -->
         <item>273.15,-</item>
         <!-- Kelvin to Kelvin -->
+        <item>1,*</item>
+        <!-- Kelvin to Gas Mark -->
+        <item>273.15,-,9,5,/,*,32,+,0.04,*,10,-</item>
+        <!-- Gas Mark to Fahrenheit -->
+        <item>25,*,250,+</item>
+        <!-- Gas Mark to C -->
+        <item>25,*,250,+,32,-,5,9,/,*</item>
+        <!-- Gas Mark to Kelvin -->
+        <item>25,*,250,+,32,-,5,9,/,*,273.15,+</item>
+        <!-- Gas Mark to Gas Mark -->
         <item>1,*</item>
     </string-array>
     
