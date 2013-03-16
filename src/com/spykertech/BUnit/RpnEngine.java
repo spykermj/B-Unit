@@ -19,8 +19,6 @@ public class RpnEngine {
 		
 	}
 	
-	// TODO: create routine that checks for sufficient operands for any operator
-	
 	private Double popAsDouble() {
 		Double returnValue = Double.NaN;
 		try {
@@ -119,7 +117,7 @@ public class RpnEngine {
 						format = String.format(Locale.ENGLISH, "%s.%dg", "%", decimals);
 					}
 					returnValue = String.format(format, resultValue);
-					returnValue = returnValue.replaceFirst("0+$", "");
+					returnValue = returnValue.replaceFirst("\\.0+$", "");
 					returnValue = returnValue.replaceFirst("\\.$", "");
 				} catch (NumberFormatException e) {
 				}

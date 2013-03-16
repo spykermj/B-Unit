@@ -323,7 +323,7 @@
         <!-- Cubic Feet to Cubic Miles -->
         <item>55306341,1953125000,/,*,4168181825,/</item>
         <!-- Cubic Yards to Cubic Centimetres -->
-        <item>55306341,1953125000,/,*,1000000,*</item>
+        <item>764554.857984,*</item>
         <!-- Cubic Yards to Cubic Inches -->
         <item>1493271207,1953125000,/,*,125000000000,2048383,/,*</item>
         <!-- Cubic Yards to Cubic Feet -->
@@ -357,7 +357,7 @@
         <!-- Cubic Kilometres to Cubic Feet -->
         <item>1000000000,*,55306341,1953125000,/,/</item>
         <!-- Cubic Kilometres to Cubic Yards -->
-        <item>1000000000,*,1493271207,1953125000,/,/</item>
+        <item>0.0009144,0.0009144,0.0009144,*,*,/</item>
         <!-- Cubic Kilometres to Cubic Metres -->
         <item>1000000000,*</item>
         <!-- Cubic Kilometres to Cubic Kilometres -->
