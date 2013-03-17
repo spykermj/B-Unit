@@ -71,7 +71,11 @@ public class ConverterActivity extends FragmentActivity implements
 		}
 		
 		if(rpnEnabled) {
-			getStatusView().setText(String.format("%s,%s", conversionValue, rpnExpression));
+			if(rpnExpression.contains("x")) {
+				getStatusView().setText(rpnExpression.replace("x", conversionValue));
+			} else {
+				getStatusView().setText(String.format("%s,%s", conversionValue, rpnExpression));
+			}
 		} else {
 			getStatusView().setText("");
 		}

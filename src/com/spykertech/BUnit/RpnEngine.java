@@ -100,7 +100,11 @@ public class RpnEngine {
 	public String pushPop(String startValue, String rpnString) {
 		String returnValue = startValue.toString();
 		stack.setSize(0);
-		rpnString = String.format("%s,%s", startValue, rpnString);
+		if(rpnString.contains("x")) {
+			rpnString = rpnString.replace("x", startValue);
+		} else {
+			rpnString = String.format("%s,%s", startValue, rpnString);
+		}
 		if(rpnStringContainsValidElements(rpnString)) {					
 			for(String token : rpnString.split(",")) {
 				if(token != "") {

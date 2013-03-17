@@ -17,6 +17,7 @@
         <item>Weight / Mass</item>
         <item>Temperature</item>
         <item>Volume</item>
+        <item>Fuel Consumption</item>
     </string-array>
     <string-array name="conversion_category_units0">
         <item>Centimetres</item>
@@ -56,6 +57,13 @@
         <item>Cubic Metres</item>
         <item>Cubic Kilometres</item>
         <item>Cubic Miles</item>
+    </string-array>
+    <string-array name="conversion_category_units6">
+        <item>Miles per Gallon (US)</item>
+        <item>Miles per Gallon (Imperial)</item>
+        <item>Kilometres per Litre</item>
+        <item>Miles per Litre</item>
+        <item>Litres per 100 Kilometres</item>
     </string-array>
 
     <!-- Length -->
@@ -379,4 +387,58 @@
         <!-- Cubic Miles to Cubic Miles -->
         <item>1,*</item>
 	</string-array>
+	
+    <!-- Fuel consumption -->
+    <string-array name="conversion_matrix6">
+        <!-- MPG (US) to MPG (US) -->
+        <item>1,*</item>
+        <!-- MPG (US) to MPG (Imperial) -->
+        <item>1.609344,3.785411784,/,*,1.609344,4.54609188,/,/</item>
+        <!-- MPG (US) to km / litre -->
+        <item>1.609344,3.785411784,/,*</item>
+        <!-- MPG (US) to Miles per Litre -->
+        <item>1.609344,3.785411784,/,*,1.609344,/</item>
+        <!-- MPG (US) to litres / 100 km -->
+        <item>100,x,1.609344,3.785411784,/,*,/</item>
+        <!-- MPG (Imperial) to MPG (US) -->
+        <item>1.609344,4.54609188,/,*,1.609344,3.785411784,/,/</item>
+        <!-- MPG (Imperial) to MPG (Imperial) -->
+        <item>1,*</item>
+        <!-- MPG (Imperial) to km / litre -->
+        <item>1.609344,4.54609188,/,*</item>
+        <!-- MPG (Imperial) to Miles per Litre -->
+        <item>1.609344,4.54609188,/,*,1.609344,/</item>
+        <!-- MPG (Imperial) to litres / 100 km -->
+        <item>100,x,1.609344,4.54609188,/,*,/</item>
+        <!-- km / litre to MPG (US) -->
+        <item>1.609344,3.785411784,/,/</item>
+        <!-- km / litre to MPG (Imperial) -->
+        <item>1.609344,4.54609188,/,/</item>
+        <!-- km / litre to km / litre -->
+        <item>1,*</item>
+        <!-- km / litre to Miles per Litre -->
+        <item>1.609344,/</item>
+        <!-- km / litre to litres / 100 km -->
+        <item>100,x,/</item>
+        <!-- Miles per Litre to MPG (US) -->
+        <item>1.609344,*,1.609344,3.785411784,/,/</item>
+        <!-- Miles per Litre to MPG (Imperial -->
+        <item>1.609344,*,1.609344,4.54609188,/,/</item>
+        <!-- Miles per Litre to km / litre -->
+        <item>1.609344,*</item>
+        <!-- Miles per Litre to Miles per Litre -->
+        <item>1,*</item>
+        <!-- Miles per Litre to litres / 100 km -->
+        <item>100,x,1.609344,*,/</item>
+        <!-- litres / 100 km to MPG (US) -->
+        <item>100,x,/,1.609344,3.785411784,/,/</item>
+        <!-- litres / 100 km to MPG (Imperial) -->
+        <item>100,x,/,1.609344,4.54609188,/,/</item>
+        <!-- litres / 100 km to km / litre -->
+        <item>100,x,/</item>
+        <!-- litres / 100 km to Miles per Litre -->
+        <item>100,x,/,1.609344,/</item>
+        <!-- litres / 100 km to litres / 100 km -->
+        <item>1,*</item>
+    </string-array>
 </resources>
