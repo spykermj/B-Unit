@@ -121,8 +121,10 @@ public class RpnEngine {
 						format = String.format(Locale.ENGLISH, "%s.%dg", "%", decimals);
 					}
 					returnValue = String.format(format, resultValue);
-					returnValue = returnValue.replaceFirst("\\.0+$", "");
-					returnValue = returnValue.replaceFirst("\\.$", "");
+					if (returnValue.contains(".")) {
+						returnValue = returnValue.replaceFirst("0+$", "");
+						returnValue = returnValue.replaceFirst("\\.$", "");
+					}
 				} catch (NumberFormatException e) {
 				}
 			} else {
