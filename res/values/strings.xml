@@ -47,8 +47,15 @@
         <item>Gallons (Imperial)</item>
     </string-array>
     <string-array name="conversion_category_units3">
-        <item>Kilograms</item>
+        <item>Milligrams</item>
+        <item>Grams</item>
+        <item>Ounces</item>
         <item>Pounds</item>
+        <item>Kilograms</item>
+        <item>Stones</item>
+        <item>Short Tons</item>
+        <item>Tonnes</item>
+        <item>Long Tons</item>
     </string-array>
     <string-array name="conversion_category_units4">
         <item>Fahrenheit</item>
@@ -178,6 +185,7 @@
 
     <!-- Speed -->
     <string-array name="conversion_matrix1">
+
         <!-- FPS to FPS -->
         <item>1,*</item>
         <!-- FPS to MPS -->
@@ -232,7 +240,8 @@
 
     <!-- Liquid Volume -->
     <string-array name="conversion_matrix2">
-		<!-- ML to ML -->
+
+        <!-- ML to ML -->
         <item>1,*</item>
         <!-- Millilitres to Centilitres -->
         <item>0.001,*,0.01,/</item>
@@ -268,144 +277,298 @@
         <item>0.01,*,0.264172052,*</item>
         <!-- Centilitres to Gallons (Imperial) -->
         <item>0.01,*,0.219969157,*</item>
-		<!-- Litres to Millilitres -->
-		<item>0.001,/</item>
-		<!-- Litres to Centilitres -->
-		<item>0.01,/</item>
+        <!-- Litres to Millilitres -->
+        <item>0.001,/</item>
+        <!-- Litres to Centilitres -->
+        <item>0.01,/</item>
         <!-- L to L -->
         <item>1,*</item>
-		<!-- Litres to Pints (US) -->
-		<item>2.11337642,*</item>
-		<!-- Litres to Pints (Imperial) -->
-		<item>1.75975326,*</item>
-		<!-- Litres to Quarts (US) -->
-		<item>1.05668821,*</item>
-		<!-- Litres to Quarts (Imperial) -->
-		<item>0.87987663,*</item>
-		<!-- Litres to Gallons (US) -->
-		<item>0.264172052,*</item>
-		<!-- Litres to Gallons (Imperial) -->
-		<item>0.219969157,*</item>
-		<!-- Pints (US) to Millilitres -->
-		<item>2.11337642,/,0.001,/</item>
-		<!-- Pints (US) to Centilitres -->
-		<item>2.11337642,/,0.01,/</item>
-		<!-- Pints (US) to Litres -->
-		<item>2.11337642,/</item>
-		<!-- Pints (US) to Pints (US) -->
-		<item>1,*</item>
-		<!-- Pints (US) to Pints (Imperial) -->
-		<item>2.11337642,/,1.75975326,*</item>
-		<!-- Pints (US) to Quarts (US) -->
-		<item>2.11337642,/,1.05668821,*</item>
-		<!-- Pints (US) to Quarts (Imperial) -->
-		<item>2.11337642,/,0.87987663,*</item>
-		<!-- Pints (US) to Gallons (US) -->
-		<item>2.11337642,/,0.264172052,*</item>
-		<!-- Pints (US) to Gallons (Imperial) -->
-		<item>2.11337642,/,0.219969157,*</item>
-		<!-- Pints (Imperial) to Millilitres -->
-		<item>1.75975326,/,0.001,/</item>
-		<!-- Pints (Imperial) to Centilitres -->
-		<item>1.75975326,/,0.01,/</item>
-		<!-- Pints (Imperial) to Litres -->
-		<item>1.75975326,/</item>
-		<!-- Pints (Imperial) to Pints (US) -->
-		<item>1.75975326,/,2.11337642,*</item>
-		<!-- Pints (Imperial) to Pints (Imperial) -->
-		<item>1,*</item>
-		<!-- Pints (Imperial) to Quarts (US) -->
-		<item>1.75975326,/,1.05668821,*</item>
-		<!-- Pints (Imperial) to Quarts (Imperial) -->
-		<item>1.75975326,/,0.87987663,*</item>
-		<!-- Pints (Imperial) to Gallons (US) -->
-		<item>1.75975326,/,0.264172052,*</item>
-		<!-- Pints (Imperial) to Gallons (Imperial) -->
-		<item>1.75975326,/,0.219969157,*</item>
-		<!-- Quarts (US) to Millilitres -->
-		<item>1.05668821,/,0.001,/</item>
-		<!-- Quarts (US) to Centilitres -->
-		<item>1.05668821,/,0.01,/</item>
-		<!-- Quarts (US) to Litres -->
-		<item>1.05668821,/</item>
-		<!-- Quarts (US) to Pints (US) -->
-		<item>1.05668821,/,2.11337642,*</item>
-		<!-- Quarts (US) to Pints (Imperial) -->
-		<item>1.05668821,/,1.75975326,*</item>
-		<!-- Quarts (US) to Quarts (US) -->
-		<item>1.05668821,/,1.05668821,*</item>
-		<!-- Quarts (US) to Quarts (Imperial) -->
-		<item>1.05668821,/,0.87987663,*</item>
-		<!-- Quarts (US) to Gallons (US) -->
-		<item>1.05668821,/,0.264172052,*</item>
-		<!-- Quarts (US) to Gallons (Imperial) -->
-		<item>1.05668821,/,0.219969157,*</item>
-		<!-- Quarts (Imperial) to Millilitres -->
-		<item>0.87987663,/,0.001,/</item>
-		<!-- Quarts (Imperial) to Centilitres -->
-		<item>0.87987663,/,0.01,/</item>
-		<!-- Quarts (Imperial) to Litres -->
-		<item>0.87987663,/</item>
-		<!-- Quarts (Imperial) to Pints (US) -->
-		<item>0.87987663,/,2.11337642,*</item>
-		<!-- Quarts (Imperial) to Pints (Imperial) -->
-		<item>0.87987663,/,1.75975326,*</item>
-		<!-- Quarts (Imperial) to Quarts (US) -->
-		<item>0.87987663,/,1.05668821,*</item>
-		<!-- Quarts (Imperial) to Quarts (Imperial) -->
-		<item>1,*</item>
-		<!-- Quarts (Imperial) to Gallons (US) -->
-		<item>0.87987663,/,0.264172052,*</item>
-		<!-- Quarts (Imperial) to Gallons (Imperial) -->
-		<item>0.87987663,/,0.219969157,*</item>
-		<!-- Gallons (US) to Millilitres -->
-		<item>0.264172052,/,0.001,/</item>
-		<!-- Gallons (US) to Centilitres -->
-		<item>0.264172052,/,0.01,/</item>
-		<!-- Gallons (US) to Litres -->
-		<item>0.264172052,/</item>
-		<!-- Gallons (US) to Pints (US) -->
-		<item>0.264172052,/,2.11337642,*</item>
-		<!-- Gallons (US) to Pints (Imperial) -->
-		<item>0.264172052,/,1.75975326,*</item>
-		<!-- Gallons (US) to Quarts (US) -->
-		<item>0.264172052,/,1.05668821,*</item>
-		<!-- Gallons (US) to Quarts (Imperial) -->
-		<item>0.264172052,/,0.87987663,*</item>
-		<!-- Gallons (US) to Gallons (US) -->
-		<item>1,*</item>
-		<!-- Gallons (US) to Gallons (Imperial) -->
-		<item>0.264172052,/,0.219969157,*</item>
-		<!-- Gallons (Imperial) to Millilitres -->
-		<item>0.219969157,/,0.001,/</item>
-		<!-- Gallons (Imperial) to Centilitres -->
-		<item>0.219969157,/,0.01,/</item>
-		<!-- Gallons (Imperial) to Litres -->
-		<item>0.219969157,/</item>
-		<!-- Gallons (Imperial) to Pints (US) -->
-		<item>0.219969157,/,2.11337642,*</item>
-		<!-- Gallons (Imperial) to Pints (Imperial) -->
-		<item>0.219969157,/,1.75975326,*</item>
-		<!-- Gallons (Imperial) to Quarts (US) -->
-		<item>0.219969157,/,1.05668821,*</item>
-		<!-- Gallons (Imperial) to Quarts (Imperial) -->
-		<item>0.219969157,/,0.87987663,*</item>
-		<!-- Gallons (Imperial) to Gallons (US) -->
-		<item>0.219969157,/,0.264172052,*</item>
-		<!-- Gallons (Imperial) to Gallons (Imperial) -->
-		<item>1,*</item>
+        <!-- Litres to Pints (US) -->
+        <item>2.11337642,*</item>
+        <!-- Litres to Pints (Imperial) -->
+        <item>1.75975326,*</item>
+        <!-- Litres to Quarts (US) -->
+        <item>1.05668821,*</item>
+        <!-- Litres to Quarts (Imperial) -->
+        <item>0.87987663,*</item>
+        <!-- Litres to Gallons (US) -->
+        <item>0.264172052,*</item>
+        <!-- Litres to Gallons (Imperial) -->
+        <item>0.219969157,*</item>
+        <!-- Pints (US) to Millilitres -->
+        <item>2.11337642,/,0.001,/</item>
+        <!-- Pints (US) to Centilitres -->
+        <item>2.11337642,/,0.01,/</item>
+        <!-- Pints (US) to Litres -->
+        <item>2.11337642,/</item>
+        <!-- Pints (US) to Pints (US) -->
+        <item>1,*</item>
+        <!-- Pints (US) to Pints (Imperial) -->
+        <item>2.11337642,/,1.75975326,*</item>
+        <!-- Pints (US) to Quarts (US) -->
+        <item>2.11337642,/,1.05668821,*</item>
+        <!-- Pints (US) to Quarts (Imperial) -->
+        <item>2.11337642,/,0.87987663,*</item>
+        <!-- Pints (US) to Gallons (US) -->
+        <item>2.11337642,/,0.264172052,*</item>
+        <!-- Pints (US) to Gallons (Imperial) -->
+        <item>2.11337642,/,0.219969157,*</item>
+        <!-- Pints (Imperial) to Millilitres -->
+        <item>1.75975326,/,0.001,/</item>
+        <!-- Pints (Imperial) to Centilitres -->
+        <item>1.75975326,/,0.01,/</item>
+        <!-- Pints (Imperial) to Litres -->
+        <item>1.75975326,/</item>
+        <!-- Pints (Imperial) to Pints (US) -->
+        <item>1.75975326,/,2.11337642,*</item>
+        <!-- Pints (Imperial) to Pints (Imperial) -->
+        <item>1,*</item>
+        <!-- Pints (Imperial) to Quarts (US) -->
+        <item>1.75975326,/,1.05668821,*</item>
+        <!-- Pints (Imperial) to Quarts (Imperial) -->
+        <item>1.75975326,/,0.87987663,*</item>
+        <!-- Pints (Imperial) to Gallons (US) -->
+        <item>1.75975326,/,0.264172052,*</item>
+        <!-- Pints (Imperial) to Gallons (Imperial) -->
+        <item>1.75975326,/,0.219969157,*</item>
+        <!-- Quarts (US) to Millilitres -->
+        <item>1.05668821,/,0.001,/</item>
+        <!-- Quarts (US) to Centilitres -->
+        <item>1.05668821,/,0.01,/</item>
+        <!-- Quarts (US) to Litres -->
+        <item>1.05668821,/</item>
+        <!-- Quarts (US) to Pints (US) -->
+        <item>1.05668821,/,2.11337642,*</item>
+        <!-- Quarts (US) to Pints (Imperial) -->
+        <item>1.05668821,/,1.75975326,*</item>
+        <!-- Quarts (US) to Quarts (US) -->
+        <item>1.05668821,/,1.05668821,*</item>
+        <!-- Quarts (US) to Quarts (Imperial) -->
+        <item>1.05668821,/,0.87987663,*</item>
+        <!-- Quarts (US) to Gallons (US) -->
+        <item>1.05668821,/,0.264172052,*</item>
+        <!-- Quarts (US) to Gallons (Imperial) -->
+        <item>1.05668821,/,0.219969157,*</item>
+        <!-- Quarts (Imperial) to Millilitres -->
+        <item>0.87987663,/,0.001,/</item>
+        <!-- Quarts (Imperial) to Centilitres -->
+        <item>0.87987663,/,0.01,/</item>
+        <!-- Quarts (Imperial) to Litres -->
+        <item>0.87987663,/</item>
+        <!-- Quarts (Imperial) to Pints (US) -->
+        <item>0.87987663,/,2.11337642,*</item>
+        <!-- Quarts (Imperial) to Pints (Imperial) -->
+        <item>0.87987663,/,1.75975326,*</item>
+        <!-- Quarts (Imperial) to Quarts (US) -->
+        <item>0.87987663,/,1.05668821,*</item>
+        <!-- Quarts (Imperial) to Quarts (Imperial) -->
+        <item>1,*</item>
+        <!-- Quarts (Imperial) to Gallons (US) -->
+        <item>0.87987663,/,0.264172052,*</item>
+        <!-- Quarts (Imperial) to Gallons (Imperial) -->
+        <item>0.87987663,/,0.219969157,*</item>
+        <!-- Gallons (US) to Millilitres -->
+        <item>0.264172052,/,0.001,/</item>
+        <!-- Gallons (US) to Centilitres -->
+        <item>0.264172052,/,0.01,/</item>
+        <!-- Gallons (US) to Litres -->
+        <item>0.264172052,/</item>
+        <!-- Gallons (US) to Pints (US) -->
+        <item>0.264172052,/,2.11337642,*</item>
+        <!-- Gallons (US) to Pints (Imperial) -->
+        <item>0.264172052,/,1.75975326,*</item>
+        <!-- Gallons (US) to Quarts (US) -->
+        <item>0.264172052,/,1.05668821,*</item>
+        <!-- Gallons (US) to Quarts (Imperial) -->
+        <item>0.264172052,/,0.87987663,*</item>
+        <!-- Gallons (US) to Gallons (US) -->
+        <item>1,*</item>
+        <!-- Gallons (US) to Gallons (Imperial) -->
+        <item>0.264172052,/,0.219969157,*</item>
+        <!-- Gallons (Imperial) to Millilitres -->
+        <item>0.219969157,/,0.001,/</item>
+        <!-- Gallons (Imperial) to Centilitres -->
+        <item>0.219969157,/,0.01,/</item>
+        <!-- Gallons (Imperial) to Litres -->
+        <item>0.219969157,/</item>
+        <!-- Gallons (Imperial) to Pints (US) -->
+        <item>0.219969157,/,2.11337642,*</item>
+        <!-- Gallons (Imperial) to Pints (Imperial) -->
+        <item>0.219969157,/,1.75975326,*</item>
+        <!-- Gallons (Imperial) to Quarts (US) -->
+        <item>0.219969157,/,1.05668821,*</item>
+        <!-- Gallons (Imperial) to Quarts (Imperial) -->
+        <item>0.219969157,/,0.87987663,*</item>
+        <!-- Gallons (Imperial) to Gallons (US) -->
+        <item>0.219969157,/,0.264172052,*</item>
+        <!-- Gallons (Imperial) to Gallons (Imperial) -->
+        <item>1,*</item>
     </string-array>
 
     <!-- Weight / Mass -->
     <string-array name="conversion_matrix3">
 
+        <!-- Milligrams to Milligrams -->
+        <item>1,*</item>
+        <!-- Milligrams to Grams -->
+        <item>0.000001,*,0.001,/</item>
+        <!-- Milligrams to Ounces -->
+        <item>0.000001,*,35.2739619,*</item>
+        <!-- Milligrams to Pounds -->
+        <item>0.000001,*,2.20462262,*</item>
+        <!-- Milligrams to Kilograms -->
+        <item>0.000001,*</item>
+        <!-- Milligrams to Stones -->
+        <item>0.000001,*,0.157473044418,*</item>
+        <!-- Milligrams to Short Tons -->
+        <item>0.000001,*,0.00110231131,*</item>
+        <!-- Milligrams to Tonnes -->
+        <item>0.000001,*,0.001,*</item>
+        <!-- Milligrams to Long Tons -->
+        <item>0.000001,*,0.000984206528,*</item>
+        <!-- Grams to Milligrams -->
+        <item>0.001,*,0.000001,/</item>
+        <!-- Grams to Grams -->
+        <item>1,*</item>
+        <!-- Grams to Ounces -->
+        <item>0.001,*,35.2739619,*</item>
+        <!-- Grams to Pounds -->
+        <item>0.001,*,2.20462262,*</item>
+        <!-- Grams to Kilograms -->
+        <item>0.001,*</item>
+        <!-- Grams to Stones -->
+        <item>0.001,*,0.157473044418,*</item>
+        <!-- Grams to Short Tons -->
+        <item>0.001,*,0.00110231131,*</item>
+        <!-- Grams to Tonnes -->
+        <item>0.001,*,0.001,*</item>
+        <!-- Grams to Long Tons -->
+        <item>0.001,*,0.000984206528,*</item>
+        <!-- Ounces to Milligrams -->
+        <item>0.0283495231,*,0.000001,/</item>
+        <!-- Ounces to Grams -->
+        <item>0.0283495231,*,0.001,/</item>
+        <!-- Ounces to Ounces -->
+        <item>1,*</item>
+        <!-- Ounces to Pounds -->
+        <item>0.0283495231,*,2.20462262,*</item>
+        <!-- Ounces to Kilograms -->
+        <item>0.0283495231,*</item>
+        <!-- Ounces to Stones -->
+        <item>0.0283495231,*,0.157473044418,*</item>
+        <!-- Ounces to Short Tons -->
+        <item>0.0283495231,*,0.00110231131,*</item>
+        <!-- Ounces to Tonnes -->
+        <item>0.0283495231,*,0.001,*</item>
+        <!-- Ounces to Long Tons -->
+        <item>0.0283495231,*,0.000984206528,*</item>
+        <!-- Pounds to Milligrams -->
+        <item>2.20462262,/,0.000001,/</item>
+        <!-- Pounds to Grams -->
+        <item>2.20462262,/,0.001,/</item>
+        <!-- Pounds to Ounces -->
+        <item>2.20462262,/,35.2739619,*</item>
+        <!-- Pounds to Pounds -->
+        <item>1,*</item>
+        <!-- Pounds to Kilograms -->
+        <item>2.20462262,/</item>
+        <!-- Pounds to Stones -->
+        <item>2.20462262,/,0.157473044418,*</item>
+        <!-- Pounds to Short Tons -->
+        <item>2.20462262,/,0.00110231131,*</item>
+        <!-- Pounds to Tonnes -->
+        <item>2.20462262,/,0.001,*</item>
+        <!-- Pounds to Long Tons -->
+        <item>2.20462262,/,0.000984206528,*</item>
+        <!-- Kilograms to Milligrams -->
+        <item>0.000001,/</item>
+        <!-- Kilograms to Grams -->
+        <item>0.001,/</item>
+        <!-- Kilograms to Ounces -->
+        <item>35.2739619,*</item>
+        <!-- KG to Pounds -->
+        <item>2.20462262,*</item>
         <!-- KG to KG -->
         <item>1,*</item>
-        <!-- KG to Pounds -->
-        <item>2.2046,*</item>
-        <!-- Pounds to KG -->
-        <item>2.2046,/</item>
-        <!-- Pounds to Pounds -->
+        <!-- Kilograms to Stones -->
+        <item>0.157473044418,*</item>
+        <!-- Kilograms to Short Tons -->
+        <item>0.00110231131,*</item>
+        <!-- Kilograms to Tonnes -->
+        <item>0.001,*</item>
+        <!-- Kilograms to Long Tons -->
+        <item>0.000984206528,*</item>
+        <!-- Stones to Milligrams -->
+        <item>0.157473044418,/,0.000001,/</item>
+        <!-- Stones to Grams -->
+        <item>0.157473044418,/,0.001,/</item>
+        <!-- Stones to Ounces -->
+        <item>0.157473044418,/,35.2739619,*</item>
+        <!-- Stones to Pounds -->
+        <item>0.157473044418,/,2.20462262,*</item>
+        <!-- Stones to Kilograms -->
+        <item>0.157473044418,/</item>
+        <!-- Stones to Stones -->
+        <item>1,*</item>
+        <!-- Stones to Short Tons -->
+        <item>0.157473044418,/,0.00110231131,*</item>
+        <!-- Stones to Tonnes -->
+        <item>0.157473044418,/,0.001,*</item>
+        <!-- Stones to Long Tons -->
+        <item>0.157473044418,/,0.000984206528,*</item>
+        <!-- Short Tons to Milligrams -->
+        <item>0.00110231131,/,0.000001,/</item>
+        <!-- Short Tons to Grams -->
+        <item>0.00110231131,/,0.001,/</item>
+        <!-- Short Tons to Ounces -->
+        <item>0.00110231131,/,35.2739619,*</item>
+        <!-- Short Tons to Pounds -->
+        <item>0.00110231131,/,2.20462262,*</item>
+        <!-- Short Tons to Kilograms -->
+        <item>0.00110231131,/</item>
+        <!-- Short Tons to Stones -->
+        <item>0.00110231131,/,0.157473044418,*</item>
+        <!-- Short Tons to Short Tons -->
+        <item>1,*</item>
+        <!-- Short Tons to Tonnes -->
+        <item>0.00110231131,/,0.001,*</item>
+        <!-- Short Tons to Long Tons -->
+        <item>0.00110231131,/,0.000984206528,*</item>
+        <!-- Tonnes to Milligrams -->
+        <item>0.001,/,0.000001,/</item>
+        <!-- Tonnes to Grams -->
+        <item>0.001,/,0.001,/</item>
+        <!-- Tonnes to Ounces -->
+        <item>0.001,/,35.2739619,*</item>
+        <!-- Tonnes to Pounds -->
+        <item>0.001,/,2.20462262,*</item>
+        <!-- Tonnes to Kilograms -->
+        <item>0.001,/</item>
+        <!-- Tonnes to Stones -->
+        <item>0.001,/,0.157473044418,*</item>
+        <!-- Tonnes to Short Tons -->
+        <item>0.001,/,0.00110231131,*</item>
+        <!-- Tonnes to Tonnes -->
+        <item>1,*</item>
+        <!-- Tonnes to Long Tons -->
+        <item>0.001,/,0.000984206528,*</item>
+        <!-- Long Tons to Milligrams -->
+        <item>0.000984206528,/,0.000001,/</item>
+        <!-- Long Tons to Grams -->
+        <item>0.000984206528,/,0.001,/</item>
+        <!-- Long Tons to Ounces -->
+        <item>0.000984206528,/,35.2739619,*</item>
+        <!-- Long Tons to Pounds -->
+        <item>0.000984206528,/,2.20462262,*</item>
+        <!-- Long Tons to Kilograms -->
+        <item>0.000984206528,/</item>
+        <!-- Long Tons to Stones -->
+        <item>0.000984206528,/,0.157473044418,*</item>
+        <!-- Long Tons to Short Tons -->
+        <item>0.000984206528,/,0.00110231131,*</item>
+        <!-- Long Tons to Tonnes -->
+        <item>0.000984206528,/,0.001,*</item>
+        <!-- Long Tons to Long Tons -->
         <item>1,*</item>
     </string-array>
 
@@ -445,9 +608,10 @@
         <!-- Gas Mark to Gas Mark -->
         <item>1,*</item>
     </string-array>
-    
+
     <!-- Volume -->
     <string-array name="conversion_matrix5">
+
         <!-- Cubic Centimetres to Cubic Centimetres -->
         <item>1,*</item>
         <!-- Cubic Centimetres to Cubic Inches -->
@@ -546,10 +710,11 @@
         <item>4168181825,*,1000000000,/</item>
         <!-- Cubic Miles to Cubic Miles -->
         <item>1,*</item>
-	</string-array>
-	
+    </string-array>
+
     <!-- Fuel consumption -->
     <string-array name="conversion_matrix6">
+
         <!-- MPG (US) to MPG (US) -->
         <item>1,*</item>
         <!-- MPG (US) to MPG (Imperial) -->
@@ -601,4 +766,5 @@
         <!-- litres / 100 km to litres / 100 km -->
         <item>1,*</item>
     </string-array>
+
 </resources>
