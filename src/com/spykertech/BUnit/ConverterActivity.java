@@ -9,11 +9,11 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.KeyEvent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -22,7 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ConverterActivity extends FragmentActivity implements
-		ActionBar.OnNavigationListener, OnItemSelectedListener, OnKeyListener {	
+		ActionBar.OnNavigationListener, OnItemSelectedListener {	
 
 	private static final String STATE_SELECTED_NAVIGATION_ITEM = "selected_navigation_item";
 	private static final String STATE_INPUT_NUMBER = "input_number";
@@ -127,7 +127,26 @@ public class ConverterActivity extends FragmentActivity implements
 						android.R.layout.simple_spinner_item), this);
 		getFromSpinner().setOnItemSelectedListener(this);
 		getToSpinner().setOnItemSelectedListener(this);
-		getNumberInput().setOnKeyListener(this);
+		getNumberInput().addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start,
+					int count, int after) {
+				
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				updateDisplay();				
+			}
+			
+		});
 	}
 
 	/**
@@ -215,12 +234,6 @@ public class ConverterActivity extends FragmentActivity implements
 
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
-	}
-	
-	@Override
-	public boolean onKey(View view, int keyCode, KeyEvent event) {
-		updateDisplay();
-		return false;
 	}
 
 	@Override
