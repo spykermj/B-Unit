@@ -57,8 +57,14 @@ public class ConverterActivity extends FragmentActivity implements
 	}
 	
 	private String getRpnExpression() {
-		int spinnerCount = getFromSpinner().getAdapter().getCount();
-		return getConversionMatrix(getActionBar().getSelectedNavigationIndex())[getFromPosition() * spinnerCount + getToPosition()];
+		String returnValue;
+		try {
+			int spinnerCount = getFromSpinner().getAdapter().getCount();
+			returnValue = getConversionMatrix(getActionBar().getSelectedNavigationIndex())[getFromPosition() * spinnerCount + getToPosition()];
+		} catch (NullPointerException e){
+			returnValue = "";
+		}
+		return returnValue;
 	}
 
 	private void updateDisplay() {
@@ -143,7 +149,7 @@ public class ConverterActivity extends FragmentActivity implements
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				updateDisplay();				
+				updateDisplay();
 			}
 			
 		});
